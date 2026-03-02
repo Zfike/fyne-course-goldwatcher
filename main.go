@@ -1,26 +1,16 @@
 package main
 
 import (
+	"goldwatcher/ui"
 	"log"
 	"net/http"
 	"os"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
-	"fyne.io/fyne/v2/widget"
 )
 
-type Config struct {
-	App            fyne.App
-	InfoLog        *log.Logger
-	ErrorLog       *log.Logger
-	MainWindow     fyne.Window
-	PriceContainer *fyne.Container
-	ToolBar        *widget.Toolbar
-	HTTPClient     *http.Client
-}
-
-var myApp Config
+var myApp ui.Config
 
 func main() {
 	// create a fyne application
@@ -42,7 +32,7 @@ func main() {
 	myApp.MainWindow.SetFixedSize(true)
 	myApp.MainWindow.SetMaster()
 
-	myApp.makeUI()
+	myApp.MakeUI()
 
 	// show and run the application
 	myApp.MainWindow.ShowAndRun()

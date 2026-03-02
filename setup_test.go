@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"goldwatcher/ui"
 	"io"
 	"net/http"
 	"os"
@@ -10,7 +11,7 @@ import (
 	"fyne.io/fyne/v2/test"
 )
 
-var testApp Config
+var testApp ui.Config
 
 func TestMain(m *testing.M) {
 	a := test.NewApp()

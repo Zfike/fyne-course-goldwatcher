@@ -1,11 +1,12 @@
 package main
 
 import (
+	"goldwatcher/prices"
 	"testing"
 )
 
 func TestGold_GetPrices(t *testing.T) {
-	g := Gold{
+	g := prices.Gold{
 		Prices: nil,
 		Client: client,
 	}
